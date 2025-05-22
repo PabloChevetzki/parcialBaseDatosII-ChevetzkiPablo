@@ -1,0 +1,203 @@
+1) 
+use cafeteria;
+
+db.cafes.drop();
+
+db.cafes.insertMany([
+  {
+    tipo: "espresso",
+    ingredientes: ["chocolate"],
+    peso: 220,
+    intensidad: "alta",
+    precio: [
+      { tipo: "efectivo", precio: 500 },
+      { tipo: "tarjeta", precio: 550 }
+    ],
+    contieneLeche: false,
+    tostador: {
+      localidad: "Palermo",
+      nombre: "Café Palermo",
+      cuit: "30-15975378-1"
+    }
+  },
+  {
+    tipo: "cold brew",
+    ingredientes: ["vainilla", "caramelo"],
+    peso: 250,
+    intensidad: "media",
+    precio: [
+      { tipo: "efectivo", precio: 550 },
+      { tipo: "tarjeta", precio: 580 }
+    ],
+    contieneLeche: true,
+    tostador: {
+      localidad: "San Nicolás",
+      nombre: "Nicolás Cafes",
+      cuit: "30-87654321-2"
+    }
+  },
+  {
+    tipo: "descafeinado",
+    ingredientes: ["caramelo"],
+    peso: 200,
+    intensidad: "baja",
+    precio: [
+      { tipo: "efectivo", precio: 460 },
+      { tipo: "tarjeta", precio: 480 }
+    ],
+    contieneLeche: true,
+    tostador: {
+      localidad: "Córdoba",
+      nombre: "Café al Ritmo",
+      cuit: "30-56789456-3"
+    }
+  },
+  {
+    tipo: "filtrado",
+    ingredientes: ["chocolate", "vainilla-canela"],
+    peso: 230,
+    intensidad: "media",
+    precio: [
+      { tipo: "efectivo", precio: 500 },
+      { tipo: "tarjeta", precio: 530 }
+    ],
+    contieneLeche: false,
+    tostador: {
+      localidad: "Santa Rosa",
+      nombre: "Pampa Café",
+      cuit: "30-47694163-4"
+    }
+  },
+  {
+    tipo: "espresso",
+    ingredientes: ["caramelo"],
+    peso: 180,
+    intensidad: "alta",
+    precio: [
+      { tipo: "efectivo", precio: 490 },
+      { tipo: "tarjeta", precio: 520 }
+    ],
+    contieneLeche: false,
+    tostador: {
+      localidad: "Mendoza",
+      nombre: "Café Mendoza",
+      cuit: "30-18372983-5"
+    }
+  },
+  {
+    tipo: "cold brew",
+    ingredientes: ["vainilla-canela", "chocolate"],
+    peso: 240,
+    intensidad: "alta",
+    precio: [
+      { tipo: "efectivo", precio: 600 },
+      { tipo: "tarjeta", precio: 630 }
+    ],
+    contieneLeche: true,
+    tostador: {
+      localidad: "San Rafael",
+      nombre: "Rafael Coffee",
+      cuit: "30-89456785-6"
+    }
+  },
+  {
+    tipo: "descafeinado",
+    ingredientes: ["caramelo", "vainilla-canela"],
+    peso: 210,
+    intensidad: "baja",
+    precio: [
+      { tipo: "efectivo", precio: 470 },
+      { tipo: "tarjeta", precio: 500 }
+    ],
+    contieneLeche: false,
+    tostador: {
+      localidad: "La Plata",
+      nombre: "Platense Coffee",
+      cuit: "30-12378945-7"
+    }
+  },
+  {
+    tipo: "filtrado",
+    ingredientes: ["chocolate"],
+    peso: 260,
+    intensidad: "media",
+    precio: [
+      { tipo: "efectivo", precio: 520 },
+      { tipo: "tarjeta", precio: 550 }
+    ],
+    contieneLeche: true,
+    tostador: {
+      localidad: "San Isidro",
+      nombre: "Isidro Coffee",
+      cuit: "30-15975356-8"
+    }
+  },
+  {
+    tipo: "espresso",
+    ingredientes: ["caramelo"],
+    peso: 270,
+    intensidad: "alta",
+    precio: [
+      { tipo: "efectivo", precio: 610 },
+      { tipo: "tarjeta", precio: 640 }
+    ],
+    contieneLeche: true,
+    tostador: {
+      localidad: "Rosario",
+      nombre: "Rosario Café",
+      cuit: "30-14997653-9"
+    }
+  },
+  {
+    tipo: "cold brew",
+    ingredientes: ["vainilla-canela", "chocolate"],
+    peso: 195,
+    intensidad: "alta",
+    precio: [
+      { tipo: "efectivo", precio: 530 },
+      { tipo: "tarjeta", precio: 560 }
+    ],
+    contieneLeche: false,
+    tostador: {
+      localidad: "San Fernando",
+      nombre: "Fernando Coffee",
+      cuit: "30-14736985-0"
+    }
+  }
+]);
+
+
+
+-(Por las dudas lo dejo en una sola línea, ya que a mí solo me dejó ejecutarlo así.)
+
+db.cafes.insertMany([{tipo:"espresso",ingredientes:["chocolate"],peso:220,intensidad:"alta",precio:[{tipo:"efectivo",precio:500},{tipo:"tarjeta",precio:550}],contieneLeche:false,tostador:{localidad:"Palermo",nombre:"Café Palermo",cuit:"30-15975378-1"}},{tipo:"cold brew",ingredientes:["vainilla","caramelo"],peso:250,intensidad:"media",precio:[{tipo:"efectivo",precio:550},{tipo:"tarjeta",precio:580}],contieneLeche:true,tostador:{localidad:"San Nicolás",nombre:"Nicolás Cafes",cuit:"30-87654321-2"}},{tipo:"descafeinado",ingredientes:["caramelo"],peso:200,intensidad:"baja",precio:[{tipo:"efectivo",precio:460},{tipo:"tarjeta",precio:480}],contieneLeche:true,tostador:{localidad:"Córdoba",nombre:"Café al Ritmo",cuit:"30-56789456-3"}},{tipo:"filtrado",ingredientes:["chocolate","vainilla-canela"],peso:230,intensidad:"media",precio:[{tipo:"efectivo",precio:500},{tipo:"tarjeta",precio:530}],contieneLeche:false,tostador:{localidad:"Santa Rosa",nombre:"Pampa Café",cuit:"30-47694163-4"}},{tipo:"espresso",ingredientes:["caramelo"],peso:180,intensidad:"alta",precio:[{tipo:"efectivo",precio:490},{tipo:"tarjeta",precio:520}],contieneLeche:false,tostador:{localidad:"Mendoza",nombre:"Café Mendoza",cuit:"30-18372983-5"}},{tipo:"cold brew",ingredientes:["vainilla-canela","chocolate"],peso:240,intensidad:"alta",precio:[{tipo:"efectivo",precio:600},{tipo:"tarjeta",precio:630}],contieneLeche:true,tostador:{localidad:"San Rafael",nombre:"Rafael Coffee",cuit:"30-89456785-6"}},{tipo:"descafeinado",ingredientes:["caramelo","vainilla-canela"],peso:210,intensidad:"baja",precio:[{tipo:"efectivo",precio:470},{tipo:"tarjeta",precio:500}],contieneLeche:false,tostador:{localidad:"La Plata",nombre:"Platense Coffee",cuit:"30-12378945-7"}},{tipo:"filtrado",ingredientes:["chocolate"],peso:260,intensidad:"media",precio:[{tipo:"efectivo",precio:520},{tipo:"tarjeta",precio:550}],contieneLeche:true,tostador:{localidad:"San Isidro",nombre:"Isidro Coffee",cuit:"30-15975356-8"}},{tipo:"espresso",ingredientes:["caramelo"],peso:270,intensidad:"alta",precio:[{tipo:"efectivo",precio:610},{tipo:"tarjeta",precio:640}],contieneLeche:true,tostador:{localidad:"Rosario",nombre:"Rosario Café",cuit:"30-14997653-9"}},{tipo:"cold brew",ingredientes:["vainilla-canela","chocolate"],peso:195,intensidad:"alta",precio:[{tipo:"efectivo",precio:530},{tipo:"tarjeta",precio:560}],contieneLeche:false,tostador:{localidad:"San Fernando",nombre:"Fernando Coffee",cuit:"30-14736985-0"}}])
+
+
+
+2) 
+db.cafes.countDocuments({ ingredientes: "chocolate" });
+
+3)
+db.cafes.countDocuments({ tipo: "cold brew", ingredientes: "vainilla" });
+
+4)
+db.cafes.find({ intensidad: "media" }, { tipo: 1, peso: 1, _id: 0 });
+
+5)
+db.cafes.find({ peso: { $gte: 200, $lte: 260 } }, { tipo: 1, peso: 1, intensidad: 1, _id: 0 });
+
+6)
+db.cafes.find({ "tostador.localidad": { $regex: /san/i } }).sort({ peso: -1 });
+
+7) 
+db.cafes.aggregate([{ $group: { _id: "$tipo", totalPeso: { $sum: "$peso" } } }]);
+
+8)
+db.cafes.updateMany({ intensidad: "alta" },{ $addToSet: { ingredientes: "whisky" } });
+
+9)
+db.cafes.updateMany({ peso: { $gte: 200, $lte: 260 } },{ $inc: { peso: 10 } });
+
+10)
+db.cafes.deleteMany({ peso: { $lte: 210 } });
+
